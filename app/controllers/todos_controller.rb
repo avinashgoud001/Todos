@@ -1,3 +1,4 @@
+# This controller takes care of todos related CRUD operations.
 class TodosController < ApplicationController
 	 before_action :validate_user
 
