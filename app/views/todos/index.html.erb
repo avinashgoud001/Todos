@@ -1,0 +1,14 @@
+<% @tasks.each do |task|%>
+<%=  task.title %>
+<%= task.note %>
+<%= task.completed %>
+<%= link_to "Show", controller: "todos", action: "show", id: task.id%>
+<%= link_to "Edit", controller: "todos", action: "edit", id: task.id%>
+<%= link_to "Delete", "/todos/" + task.id.to_s, method: :delete%>
+<br>
+<%end %>
+
+<%= link_to "New task", controller: "todos", action: "new" %>
+
+
+<%= link_to "Logout", controller: "sessions", action: "destroy" %>

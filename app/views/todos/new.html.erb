@@ -1,0 +1,10 @@
+<h1>Create a New Todo</h1>
+<%= form_for :task, url: todos_path do |f| %>
+
+  <%= label_tag(:title, "Title:") %>
+  <%= f.text_field :title %></br>
+
+  <%= label_tag(:note, "Description") %> 
+  <%= f.text_area :note %></br>
+  <%= f.submit "Create" %>
+<% end %>

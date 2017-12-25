@@ -1,0 +1,10 @@
+<h1>Update the Todo</h1>
+<%= form_for :task, url: "/todos/"+ @task.id.to_s, method: :put do |f| %>
+
+  <%= label_tag(:title, "Title:") %>
+  <%= f.text_field :title, value: @task.title %></br>
+
+  <%= label_tag(:note, "Description") %> 
+  <%= f.text_area :note, value: @task.note %></br>
+  <%= f.submit "Update" %>
+<% end %>
